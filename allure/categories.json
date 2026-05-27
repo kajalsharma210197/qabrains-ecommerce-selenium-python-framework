@@ -1,0 +1,33 @@
+[
+  {
+    "name": "Login / Authentication failures",
+    "matchedStatuses": ["failed", "broken"],
+    "messageRegex": ".*login.*|.*credential.*|.*redirect.*|.*homepage.*",
+    "traceRegex": ".*test_login.*|.*LoginPage.*"
+  },
+  {
+    "name": "Cart / Product workflow failures",
+    "matchedStatuses": ["failed", "broken"],
+    "messageRegex": ".*cart.*|.*product.*|.*price.*|.*not found in cart.*",
+    "traceRegex": ".*test_cart.*|.*CartPage.*|.*HomePage.*"
+  },
+  {
+    "name": "Product defects (assertion failures)",
+    "matchedStatuses": ["failed"],
+    "messageRegex": ".*AssertionError.*|.*assert.*"
+  },
+  {
+    "name": "Test defects (timeouts / logic)",
+    "matchedStatuses": ["broken"],
+    "messageRegex": ".*TimeoutException.*|.*RuntimeError.*|.*No product.*"
+  },
+  {
+    "name": "Automation / infrastructure",
+    "matchedStatuses": ["broken", "failed"],
+    "messageRegex": ".*WebDriverException.*|.*invalid session.*|.*session deleted.*|.*Browser session.*"
+  },
+  {
+    "name": "Ignored / skipped tests",
+    "matchedStatuses": ["skipped"]
+  }
+]

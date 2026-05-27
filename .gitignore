@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+env/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Reports and artifacts
+reports/
+*.log
+*.tmp
+*.bak
+*.swp
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.settings/
+.project
+.classpath
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Legacy Java/Maven (removed)
+target/
+out/
+
+temp/
+
+# Local Allure CLI + portable JRE downloads
+tools/

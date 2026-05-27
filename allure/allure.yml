@@ -1,0 +1,5 @@
+# Allure report configuration (used with: allure generate ... --config allure)
+plugins:
+  - behaviors-plugin
+  - packages-plugin
+  - categories-plugin
