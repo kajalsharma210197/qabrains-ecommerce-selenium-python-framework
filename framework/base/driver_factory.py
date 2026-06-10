@@ -75,8 +75,10 @@ class DriverFactory:
                     options.add_argument("--headless=new")
                 service = ChromeService(ChromeDriverManager().install())
                 driver = webdriver.Chrome(service=service, options=options)
-
-            driver.maximize_window()
+            if headless:
+                driver.set_window_size(1920, 1080)
+            else:
+                driver.maximize_window()
             # Use explicit waits only — implicit wait causes flaky sessions.
             driver.implicitly_wait(0)
             driver.set_page_load_timeout(timeout)
